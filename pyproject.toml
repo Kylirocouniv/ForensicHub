@@ -1,0 +1,100 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ForensicHub13"
+dynamic = ["version"]
+description = "A codebase integrated Image manipulation detection & localization, Deepfake detection, Document manipulation detection and AIGC detection."
+readme = "README.md"
+requires-python = ">=3.9,<3.14"
+license = { text = "CC-BY-4.0" }
+
+authors = [
+    { name = "Xiaochen Ma", email = "xiaochen.ma.cs@gmail.com" }
+]
+
+keywords = [
+    "AI",
+    "artificial intelligence",
+    "image forensics",
+    "image manipulation localization",
+    "image manipulation detection",
+    "Deepfake detection",
+    "AIGC detection"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only"
+]
+
+dependencies = [
+    "albumentations",
+    "appdirs",
+    "colorama",
+    "efficientnet_pytorch",
+    "einops",
+    "ftfy",
+    "grad_cam",
+    "imageio",
+    "imdlbenco13==0.2.2",
+    "imutils",
+    "jpegio",
+    "kmeans_pytorch",
+    "lmdb",
+    "matplotlib",
+    "numpy",
+    "opencv_python",
+    "opencv_python_headless",
+    "pillow",
+    "pytorch_wavelets",
+    "regex",
+    "Requests",
+    "rich",
+    "scikit_learn",
+    "segmentation_models_pytorch",
+    "six",
+    "tensorflow",
+    "timm",
+    "torchvision",
+    "tqdm",
+    "ttach",
+    "yacs",
+    "simplejson",
+    "kornia",
+    "loralib",
+    "transformers",
+    "dlib",
+    "imgaug"
+]
+[project.optional-dependencies]
+mlops = [
+  "mlflow"
+]
+[project.urls]
+Homepage = "https://github.com/scu-zjz/ForensicHub"
+Documentation = "https://github.com/scu-zjz/ForensicHub-doc"
+Issues = "https://github.com/scu-zjz/ForensicHub/issues"
+
+[project.scripts]
+forhub = "ForensicHub.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.dynamic]
+version = { attr = "ForensicHub.version.__version__" }

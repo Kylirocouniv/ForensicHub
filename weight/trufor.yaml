@@ -1,0 +1,14 @@
+GPUS: (1,2,3,4)
+MODEL:
+  EXTRA:
+    BACKBONE: mit_b2
+    # CONF_BACKBONE: mit_b2
+    DECODER: MLPDecoder
+    DECODER_EMBED_DIM: 768
+    CONF: true
+    DETECTION: confpool
+    PREPRC: imagenet
+    # NP_WEIGHTS: /home/59435a/Forensic_hub/weight/noiseprint++.th
+    BN_EPS: 1e-5
+    BN_MOMENTUM: 0.01
+  # PRETRAINED: /home/59435a/Forensic_hub/weight/mit_b2.pth

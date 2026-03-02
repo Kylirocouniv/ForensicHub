@@ -1,0 +1,180 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run ffdn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=1",
+                "training_scripts/train.py",
+                "--config",
+                "statics/doc/ffdn_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run ffdn multi",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=4",
+                "training_scripts/train.py",
+                "--config",
+                "statics/doc/ffdn_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+         {
+            "name": "Run trufor",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=1",
+                "training_scripts/train.py",
+                "--config",
+                "statics/mask2label/trufor_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run trufor multi",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=4",
+                "training_scripts/train.py",
+                "--config",
+                "statics/mask2label/trufor_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run mesorch",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=1",
+                "training_scripts/train.py",
+                "--config",
+                "statics/mask2label/mesorch_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "2",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },{
+            "name": "Run mesorch multi",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=4",
+                "training_scripts/train.py",
+                "--config",
+                "statics/mask2label/mesorch_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Run adcd_net multi",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=4",
+                "training_scripts/train.py",
+                "--config",
+                "statics/doc/adcd_net_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1,2,3",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+         {
+            "name": "Run adcd_net",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "torch.distributed.run",
+            "args": [
+                "--standalone",
+                "--nnodes=1",
+                "--nproc_per_node=1",
+                "training_scripts/train.py",
+                "--config",
+                "statics/doc/adcd_net_train.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0,1",
+                "PYTHONPATH":"/home/59435a/Forensic_hub",
+                "LD_LIBRARY_PATH":"",
+            },
+            "cwd": "${workspaceFolder}/ForensicHub",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
