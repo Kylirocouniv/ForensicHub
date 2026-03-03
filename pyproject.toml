@@ -48,7 +48,7 @@ dependencies = [
     "ftfy",
     "grad_cam",
     "imageio",
-    "imdlbenco13==0.2.2",
+    "imdlbenco13==0.2.5",
     "imutils",
     "jpegio",
     "kmeans_pytorch",
